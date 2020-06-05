@@ -20,4 +20,6 @@ RUN apk add --update \
 
 COPY ./restore.sh .
 
+RUN chmod 755 restore.sh
+
 CMD [ "./restore.sh" ]
