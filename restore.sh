@@ -1,4 +1,6 @@
 #!/bin/sh
+set -x
+
 S3_FILENAME="$S3/$FILENAME"
 
 if [ $? -ne 1 ]; then
