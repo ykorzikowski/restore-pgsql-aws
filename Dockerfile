@@ -28,5 +28,6 @@ WORKDIR /app
 COPY ./restore.sh .
 
 RUN chmod 755 restore.sh
+RUN chgrp -R 0 /app /pg_backup && chmod -R g=u /app /pg_backup
 
 CMD [ "./restore.sh" ]
